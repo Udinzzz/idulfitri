@@ -1,0 +1,172 @@
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    /* width: 250px; */
+    animation: 1s ease-out 0s 1 slideInLeft;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    background: none;
+    backdrop-filter: brightness(60%);
+    color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vW;
+    height: 100vh;
+    font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
+    background-image: url("Backround.jpg");
+    background-size: cover;
+    /* Mengisi seluruh area latar belakang */
+    background-repeat: no-repeat;
+    /* Tidak mengulang gambar */
+    background-attachment: fixed;
+    /* Membuat gambar tetap di tempat saat menggulir halaman*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: #ffffff;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container-1 {
+    padding: 5px;
+    margin: 5px;
+    background: none;
+    backdrop-filter: brightness(50%);
+    border-radius: 10px;
+    width: auto;
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.container-btn {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn {
+    font-size: 20px;
+    border-radius: 10px;
+    border-color: none;
+    height: min-content;
+}
+
+.tolak {
+    background-color: red;
+    z-index: 0;
+}
+
+.maaf {
+    background-color: green;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.bg-content {
+    width: auto;
+    align-items: center;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100vw;
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+}
+
+@keyframes typing-mini {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.text-message {
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    80% {
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
