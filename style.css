@@ -113,6 +113,8 @@ footer {
     background-color: black;
     color: #ffffff;
     text-align: center;
+    position: fixed;
+    bottom: 0;
 }
 
 @keyframes typing-mini {
